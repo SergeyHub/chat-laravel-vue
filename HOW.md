@@ -73,15 +73,35 @@ DB_PASSWORD=123456
 `composer require laravel/sanctum`  
 `php artisan vendor:publish --provider="Laravel\Sanctum\SanctumServiceProvider"`  
 `php artisan migrate`  
-
-##### 3. Jetstream
-`composer require laravel/jetstream`
+`php artisan vendor:publish --tag=jetstream-views`
+##### 3. Jetstream Inertia
+`composer require laravel/jetstream`  
 `php artisan jetstream:install inertia`  
 
 `php artisan migrate`  
 `npm i`   
 `npm install`  
 `npm run dev`
+
+##### 4. ChatRoom -m ChatMessage -m 
+
+```
+Schema::create('chat_rooms', function (Blueprint $table) {
+    $table->id();
+    $table->string('name');
+    $table->timestamps();
+});
+```
+```
+Schema::create('chat_messages', function (Blueprint $table) {
+    $table->id();
+    $table->integer('chat_room_id');
+    $table->integer('user_id');
+    $table->mediumText('message');
+    $table->timestamps();
+});
+```
+`php artisan migrate`
 
 app/Providers/AppServiceProvider.php
 ```

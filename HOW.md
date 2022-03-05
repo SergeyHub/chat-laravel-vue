@@ -74,10 +74,14 @@ DB_PASSWORD=123456
 `php artisan vendor:publish --provider="Laravel\Sanctum\SanctumServiceProvider"`  
 `php artisan migrate`  
 
+##### 3. Jetstream
+`composer require laravel/jetstream`
+`php artisan jetstream:install inertia`  
 
-
-`php artisan make:controller ItemsController --resource`  
-`php artisan make:model Items -m`
+`php artisan migrate`  
+`npm i`   
+`npm install`  
+`npm run dev`
 
 app/Providers/AppServiceProvider.php
 ```

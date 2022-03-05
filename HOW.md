@@ -63,7 +63,18 @@ DB_PASSWORD=123456
 
 `php artisan migrate`  
 
-##### 2. Create Item Model Controller Table & route
+##### 1.4 Version
+`npm -v`  
+`php -v`
+
+##### 2. Installation Laravel Sanctum
+[Laravel Sanctum https://laravel.com/docs/8.x/sanctum](https://laravel.com/docs/8.x/sanctum)   
+
+`composer require laravel/sanctum`  
+`php artisan vendor:publish --provider="Laravel\Sanctum\SanctumServiceProvider"`  
+`php artisan migrate`  
+
+
 
 `php artisan make:controller ItemsController --resource`  
 `php artisan make:model Items -m`
